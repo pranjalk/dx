@@ -1,3 +1,9 @@
+[![Code Climate](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/badges/0f927d7b04e5a3a05d2b/gpa.svg)](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/feed)
+
+[![Test Coverage](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/badges/0f927d7b04e5a3a05d2b/coverage.svg)](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/coverage)
+
+[![Issue Count](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/badges/0f927d7b04e5a3a05d2b/issue_count.svg)](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/feed)
+
 # Diagnostics Order Workflow
 Simple workflow for ordering diagnostic tests online
 Created for JS Hello World Project
