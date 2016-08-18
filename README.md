@@ -3,13 +3,25 @@ Simple workflow for ordering diagnostic tests online
 Created for JS Hello World Project
 
 ## Tech (MERN Stack)
-  - MySQL - Relational Database Management
-  - Express framework - fast node.js network app framework
-  - React JS -HTML enhanced for User Interfaces
-  - Node.js - evented I/O for the backend
-  - jquery - well defacto javascript library (maybe...)
+  - MariaDB v10.1.13 (Stable LTS) - Relational Database Management
+  - Express v4.14.0 (Stable) - fast node.js network app framework
+  - ReactJS v15.3 (Latest) -HTML enhanced for User Interfaces
+  - Node.js v6.3.1 (Latest) - evented I/O for the backend
 
 ## Setting up the environment
+
+### Setting up MariaDB
+  - For linux
+  
+    ```bash
+      sudo apt-get install software-properties-common
+      sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+      sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://mirror.fibergrid.in/mariadbrepo/10.1/ubuntu trusty main'
+    ```
+    ```bash
+      sudo apt-get update
+      sudo apt-get install mariadb-server
+    ```  
 
 ### Setting up NPM
   - For Linux
@@ -32,7 +44,7 @@ Created for JS Hello World Project
 ### Running the server
   
   ```bash
-    node server.js &
+    npm start
   ```
   
 ### Contributing
