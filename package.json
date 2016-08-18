@@ -4,17 +4,20 @@
   "description": "Dx ordering workflow",
   "main": "server.js",
   "scripts": {
-      "start": "node server.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --hot"
   },
   "author": "Pranjal Kumar",
   "license": "MIT",
   "dependencies": {
-      "express": "^4.14.0",
-      "body-parser": "^1.15.2",
-      "cookie-parser": "^1.4.3",
-      "crypto-js": "^3.1.6",
-      "ejs": "^2.5.1",
-      "mysql": "^2.11.1"
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "crypto-js": "^3.1.6",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.14.1"
   }
 }
