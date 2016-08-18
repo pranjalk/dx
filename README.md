@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pranjalk/dx.svg?branch=master)](https://travis-ci.org/pranjalk/dx)
+
 # Diagnostics Order Workflow
 Simple workflow for ordering diagnostic tests online
 Created for JS Hello World Project
