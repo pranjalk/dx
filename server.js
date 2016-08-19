@@ -8,13 +8,14 @@ const engine = reactEngine.server.create({
 });
 app.engine('.jsx', engine);
 
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/view'));
 app.set('view engine', 'jsx');
 app.set('view', require('react-engine/lib/expressView'));
 
-const server = app.listen(3000, function () {
-  const host = server.address().address;
-  const port = server.address().port;
+app.get('/', (req, res) => {
+  res.render('index.jsx');
+});
 
-  console.log('Example app listening at http://%s:%s', host, port);
+app.listen(3000, () => {
+  console.log('dx server listening on port 3000!');
 });
