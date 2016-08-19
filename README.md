@@ -1,8 +1,4 @@
-<<<<<<< .merge_file_EYGypV
 [![Code Climate](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/badges/0f927d7b04e5a3a05d2b/gpa.svg)](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/feed) [![Test Coverage](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/badges/0f927d7b04e5a3a05d2b/coverage.svg)](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/coverage) [![Issue Count](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/badges/0f927d7b04e5a3a05d2b/issue_count.svg)](https://codeclimate.com/repos/57b5bca0bd7db802b6002d8b/feed) [![Build Status](https://travis-ci.org/pranjalk/dx.svg?branch=master)](https://travis-ci.org/pranjalk/dx)
-=======
-[![Build Status](https://travis-ci.org/pranjalk/dx.svg?branch=master)](https://travis-ci.org/pranjalk/dx)
->>>>>>> .merge_file_U3WfgC
 
 # Diagnostics Order Workflow
 Simple workflow for ordering diagnostic tests online
