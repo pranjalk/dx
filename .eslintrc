@@ -24,8 +24,7 @@ rules:
   no-sparse-arrays: 1
   eqeqeq: 1
   no-eval: 1
-  no-magic-numbers:
-  - 1
+  no-magic-numbers: 1
   - ignoreArrayIndexes: true
     ignore:
     - -1
