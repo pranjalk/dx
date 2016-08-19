@@ -1,18 +1,20 @@
 const express = require('express');
-
-const app = express();
-
+const reactEngine = require('react-engine');
 const path = require('path');
 
-app.use(express.static('static'));
-app.set('views', path.join(__dirname, '/view'));
-
-app.engine('html', require('ejs').renderFile);
-
-app.get('/', function (req, res) {
-  res.render('index.html');
+const app = express();
+// create an engine instance
+const engine = reactEngine.server.create({
 });
+app.engine('.jsx', engine);
 
-app.listen(3000, function () {
-  console.log('dx server listening on port 3000!');
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'jsx');
+app.set('view', require('react-engine/lib/expressView'));
+
+const server = app.listen(3000, function () {
+  const host = server.address().address;
+  const port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
 });

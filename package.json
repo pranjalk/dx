@@ -15,9 +15,12 @@
     "ejs": "^2.5.1",
     "eslint": "^3.3.1",
     "express": "^4.14.0",
+    "express-react-views": "^0.10.2",
     "mysql": "^2.11.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
+    "react-engine": "^4.1.0",
+    "react-router": "^2.6.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.14.1"
   },
