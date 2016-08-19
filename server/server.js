@@ -3,8 +3,8 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('../src'));
-app.set('views', path.join(__dirname, '../view'));
+app.use(express.static('./dist'));
+app.set('views', path.join(__dirname, '../views'));
 
 app.engine('html', require('ejs').renderFile);
 
