@@ -1,4 +1,4 @@
-{
+module.exports = {
   "ecmaFeatures": {
     "modules": true,
     "jsx": true,
@@ -54,4 +54,4 @@
     ],
     "vars-on-top": 1
   }
-}
+};
