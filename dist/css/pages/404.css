@@ -1,0 +1,42 @@
+.main-box {
+  top: 0;
+  left: 0;
+  background: #F3FAB6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
+.float-box {
+  align: center;
+  position: absolute;
+  top: 0.5%;
+  left: 0.5%;
+  width: 99%;
+  height: 98%;
+  background: rgba(255, 255, 255, 0.5);
+  font-family: 'Lato', sans-serif; }
+
+.textbox {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+.fourofour {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 200px;
+  font-weight: 300; }
+
+.fourdesc {
+  font-family: 'Lato', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
