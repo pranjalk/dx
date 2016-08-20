@@ -4,7 +4,7 @@
   "description": "Dx ordering workflow",
   "main": "server.js",
   "scripts": {
-    "start": "node ./server/server.js"
+    "start": "webpack-dev-server --hot"
   },
   "author": "Pranjal Kumar",
   "license": "MIT",
