@@ -19,6 +19,8 @@
     "eslint": "^3.3.1",
     "express": "^4.14.0",
     "mysql": "^2.11.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
