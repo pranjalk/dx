@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 export default class Registerformat extends React.Component {
   render() {
     return (
-      <div id="register" method="POST">
+      <div id="register">
         <span id="heading">Diagnostics  &nbsp; &nbsp; &nbsp;</span>
         <form action="/doregister"  method="POST">
           <input type="email" name="registeremail" placeholder="email  "></input>
