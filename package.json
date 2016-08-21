@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./server/server.js",
     "webpack": "webpack-dev-server --hot",
-    "build-css": "node-sass --include-path scss ./src/css/pages/error_pages.scss   ./dist/css/pages/error_pages.css",
+    "build-css": "node-sass --include-path scss ./src/css/pages/register.scss   ./dist/css/pages/register.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "Pranjal Kumar",
@@ -25,6 +25,7 @@
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "sequelize": "^3.24.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.14.1"
   },
