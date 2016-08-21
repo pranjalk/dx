@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
 
 app.use(express.static('./dist'));
@@ -16,6 +15,12 @@ app.get('/404', (req, res) => {
 });
 app.get('/503', (req, res) => {
   res.render('503.html');
+});
+app.get('/register', (req, res) => {
+  res.render('register.html');
+});
+app.get('/login', (req, res) => {
+  res.render('login.html');
 });
 
 app.listen(3000, () => {
