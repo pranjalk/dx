@@ -1,0 +1,47 @@
+$diag_data_width: 65%;
+$diag_left_margin: 1%;
+$border_radius: 0.3em;
+$border_colour: #A8CD1B;
+$border_thickness: 1px;
+$diag_center_padding: 30px;
+#dxcenterbox {
+  position: absolute;
+  width: $diag_data_width;
+  height: 89%;
+  margin: 0;
+  top: 65px;
+  left: $diag_left_margin;
+  background: rgba(0,0,255,0.0);
+  border-radius: $border_radius;
+  border: $border_thickness solid $border_colour;
+}
+#cartbox {
+  position: absolute;
+  width: 32%;
+  height: 89%;
+  margin: 0;
+  top: 65px;
+  left: $diag_left_margin + $diag_data_width + 1%;
+  background: rgba(0,0,255,0.0);
+  border-radius: $border_radius;
+  border: $border_thickness solid $border_colour;
+}
+#diagCenterName {
+  padding-left: $diag_center_padding;
+  font-size: 52px;
+}
+#middleline {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#diagCenterAddress {
+  width: 90%;
+  font-size: 24px;
+  padding-left: $diag_center_padding;
+}
+#diagCenterDesc {
+  width: 90%;
+  padding-left: $diag_center_padding;
+  text-align: justify;
+}

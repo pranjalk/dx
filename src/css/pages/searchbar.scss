@@ -1,3 +1,4 @@
+$font_size: 28px;
 #searchBar {
   border-radius: 0.3em;
   border: 0.5px solid #A8CD1B;
@@ -17,7 +18,7 @@ input::-webkit-calendar-picker-indicator {
     width: 25%;
     height: 35px;
     display: inline;
-    font-size: 32px;
+    font-size: $font_size;
     font-family: 'Lato', sans-serif;
     text-align: center;
     margin-left: 1px;
@@ -29,7 +30,7 @@ input::-webkit-calendar-picker-indicator {
     width: 65%;
     height: 35px;
     display: inline;
-    font-size: 32px;
+    font-size: $font_size;
     font-family: 'Lato', sans-serif;
     text-align: center;
     margin-left: 2px;
