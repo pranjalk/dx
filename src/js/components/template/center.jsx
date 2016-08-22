@@ -6,9 +6,9 @@ class DiagnosticsCenter extends React.Component {
    render() {
       return (
         <div>
+          <Headstrip />
           <div className="main-box">
             <div className="float-box">
-            <Headstrip />
               <div className="textbox">
               </div>
             </div>
