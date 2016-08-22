@@ -5,9 +5,9 @@ export default class Searchbar extends React.Component {
   render() {
     return (
       <div id="searchBar">
-        <form action="/search" method="get">
-          <input list="searchOption" id="inputlist" type="text" placeholder="Search by"></input>
-          <datalist id="searchOption">
+        <form action="/search" method="GET">
+          <input list="searchOption" id="inputlist" name="searchtype" type="text" placeholder="Search by"></input>
+          <datalist id="searchOption" name="searchtype">
             <option value="centers"></option>
             <option value="tests"></option>
           </datalist>
