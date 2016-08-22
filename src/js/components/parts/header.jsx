@@ -6,7 +6,7 @@ import Login from './loginbox.jsx';
 class Headerstrip extends React.Component {
    render() {
       return (
-          <div id="topstrip">
+          <div className="topstrip">
             <div id="logobox">
               <img id="logo" src="../../../dist/img/dxlogo.png"></img>
             </div>
