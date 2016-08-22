@@ -11,7 +11,7 @@ class Indextemplate extends React.Component {
                 <div className="main-logo">
                   <img id="logo" src="./img/dxlogo.png"></img>
                 </div>
-                <Searchbar />
+                    <Searchbar />
               </div>  
             </div>
           </div>
