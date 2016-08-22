@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./server/server.js",
     "webpack": "webpack-dev-server --hot",
-    "build-css": "node-sass --include-path scss ./src/css/pages/index.scss   ./dist/css/pages/index.css",
+    "build-css": "node-sass --include-path scss ./src/css/pages/header.scss   ./dist/css/pages/header.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "Pranjal Kumar",
