@@ -13,7 +13,7 @@ export default class Searchbar extends React.Component {
           </datalist>
           <input type="text" name="searchelement" id="searchdata" placeholder="lab name / test type"></input>
           <button id="searchClick">
-              <img id="searchlogo" src="./img/search.png"></img>
+              <img id="searchlogo" src="../../../dist/img/search.png"></img>
           </button>
         </form>
       </div>

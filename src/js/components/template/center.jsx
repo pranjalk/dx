@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Fiveothree from '../parts/fiveothree.jsx';
+import Headstrip from '../parts/header.jsx';
 
-class Fiveox extends React.Component {
+class DiagnosticsCenter extends React.Component {
    render() {
       return (
+        <div>
           <div className="main-box">
             <div className="float-box">
+            <Headstrip />
               <div className="textbox">
-                <Fiveothree />
               </div>
             </div>
           </div>
+        </div>  
       );
    }
 }
 
-export default Fiveox;
+export default DiagnosticsCenter;

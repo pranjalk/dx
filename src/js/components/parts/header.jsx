@@ -8,7 +8,7 @@ class Headerstrip extends React.Component {
       return (
           <div id="topstrip">
             <div id="logobox">
-              <img id="logo" src="../../../../dist/img/dxlogo.png"></img>
+              <img id="logo" src="../../../dist/img/dxlogo.png"></img>
             </div>
             <div id="searchbox">
               <Searchbar />
