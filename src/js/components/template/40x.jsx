@@ -7,7 +7,7 @@ class Fourox extends React.Component {
       return (
           <div className="main-box">
             <div className="float-box">
-              <div className="textbox">
+              <div className="text-box">
                 <Fourofour />
               </div>
             </div>

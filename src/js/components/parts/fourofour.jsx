@@ -8,7 +8,7 @@ export default class Fourofour extends React.Component {
         <div className="fourofour">
           404!
          </div> 
-        <div className="fourdesc">
+        <div className="fourofourdescription">
           Oops! You Did It Again...
         </div> 
       </div>
