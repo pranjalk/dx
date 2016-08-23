@@ -1,11 +1,12 @@
+//Default react go here
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
+//Sekf created components go here
 import Error404 from './components/template/40x.jsx';
 import MainPage from './components/template/index.jsx';
 
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
-
+//store and router go here
 class App extends React.Component {
   render() {
       return (
