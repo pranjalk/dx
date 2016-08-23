@@ -1,0 +1,51 @@
+$font_size: 28px;
+#searchBar {
+  border-radius: 0.3em;
+  border: 0.5px solid #A8CD1B;
+  height: 41px;
+  width: 100%;
+  padding: 5px;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+#searchlogo {
+  width: 32px;
+  height: auto;
+}
+
+#inputlist {
+    width: 25%;
+    height: 35px;
+    display: inline;
+    font-size: $font_size;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-left: 1px;
+    margin-right: 3px;
+    margin-bottom: 2px; 
+}
+
+#searchdata {
+    width: 65%;
+    height: 35px;
+    display: inline;
+    font-size: $font_size;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+#searchClick {
+  position: absolute;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  width: 36px;
+  height: 36px;
+  background: rgba(0,0,0,0);
+  border-radius: 0.3em;
+  border: 0px solid #A8CD1B;
+
+}
