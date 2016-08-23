@@ -1,19 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-export default class Fourofour extends React.Component {
+class Fourofour extends React.Component {
   render() {
     return (
       <div>
         <div className="fourofour">
           404!
-         </div> 
+        </div>
         <div className="fourofourdescription">
           Oops! You Did It Again...
-        </div> 
+        </div>
       </div>
     );
   }
 }
-
 export default Fourofour;
