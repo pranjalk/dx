@@ -4,17 +4,10 @@ import ReactDOM from 'react-dom';
 export default class Searchbar extends React.Component {
   render() {
     return (
-      <div id="searchBar">
-        <form action="/search" method="GET">
-          <input list="searchOption" id="inputlist" name="searchtype" type="text" placeholder="Search by"></input>
-          <datalist id="searchOption" name="searchtype">
-            <option value="centers"></option>
-            <option value="tests"></option>
-          </datalist>
-          <input type="text" name="searchelement" id="searchdata" placeholder="lab name / test type"></input>
-          <button id="searchClick">
-              <img id="searchlogo" src="../../../dist/img/search.png"></img>
-          </button>
+      <div className="search-bar">
+        <form className="search-form">
+          <input type="text" id="search-bar__input" placeholder="Search for labs..."></input>
+          <div className="live-search-data"></div>
         </form>
       </div>
     );

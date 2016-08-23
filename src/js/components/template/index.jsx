@@ -7,11 +7,9 @@ class Indextemplate extends React.Component {
       return (
           <div className="main-box">
             <div className="float-box">
-              <div id="position-box">
-                <div className="main-logo">
-                  <img id="logo" src="./img/dxlogo.png"></img>
-                </div>
-                    <Searchbar />
+              <div className="text-box">
+                  <img className="logo" src="./img/dxlogo.png"></img>
+                  <Searchbar />
               </div>  
             </div>
           </div>
