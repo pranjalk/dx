@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
+
 import Error404 from './components/template/40x.jsx';
 import MainPage from './components/template/index.jsx';
 
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
 class App extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class App extends React.Component {
           <Route path='/' component={MainPage} />
           <Route path='*' component={Error404} />
         </Router>
-    );
+    )
   }
 }
 

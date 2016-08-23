@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Loginformat extends React.Component {
+class Loginformat extends React.Component {
   render() {
     return (
       <div id="login">

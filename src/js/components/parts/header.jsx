@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 class Headerstrip extends React.Component {
    render() {
       return (

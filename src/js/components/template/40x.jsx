@@ -14,3 +14,5 @@ class Fourox extends React.Component {
     );
   }
 }
+
+export default Fourox;
