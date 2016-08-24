@@ -1,0 +1,8 @@
+.table-main__row {
+  @include horizontal_align();
+  background: #FFFFFF;
+  padding: 0px;
+  @include border_style(0px,5px,$dark_green);
+  margin: 0px;
+  padding: 2px;
+}

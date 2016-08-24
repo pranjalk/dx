@@ -20,17 +20,7 @@ sequelize
     console.log('SOMETHING DONE GOOFED', err);
   })
   .done();
-/*
-sequelize
-  .query('SELECT * FROM user')
-    .then((myTableRows) => {
-      console.log(myTableRows);
-    })
-    .catch((err) => {
-      console.log('SOMETHING DONE GOOFED', err);
-    })
-    .done();
-*/
+
 app.use(express.static('./dist'));
 app.set('views', path.join(__dirname, '../views'));
 
@@ -44,7 +34,7 @@ app.get('/searchdx', (req, res) => {
   const inputString = req.query.q;
   const searchString = inputString.concat('%');
   sequelize
-    .query('SELECT * FROM diagnostic_center  WHERE `name` like :search_name', {
+    .query('SELECT id, name FROM diagnostic_center  WHERE `name` like :search_name', {
       replacements: {
         search_name: searchString,
       },

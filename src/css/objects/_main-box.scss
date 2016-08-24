@@ -7,4 +7,5 @@
   height: 100%;
   z-index: 0;
   @include border_style(0,10px,$light_green);
+  box-sizing: border-box;
 }

@@ -14,6 +14,7 @@ class App extends React.Component {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={MainPage} />
+        <Route path="/404" component={Error404} />
         <Route path="*" component={Error404} />
       </Router>
     );

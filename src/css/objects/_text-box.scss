@@ -2,5 +2,5 @@
   width: 40%;
   position: absolute;
   @include horizontal_align();
-  @include vertical_align(40%);
+  @include vertical_align(50%);
 }
