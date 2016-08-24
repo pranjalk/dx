@@ -14,13 +14,13 @@ class Searchbar extends React.Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
-    this.updateTag = this.updateTag.bind(this);
+    this.cleanInputBox = this.cleanInputBox.bind(this);
   }
   componentWillMount() {
     this.props.dispatch(cleanResults());
     this.forceUpdate();
   }
-  updateTag() {
+  cleanInputBox() {
     this.props.dispatch(cleanResults());
     this.forceUpdate();
   }
@@ -47,7 +47,7 @@ class Searchbar extends React.Component {
             <table className="table-main">
               <tbody>
                 {this.props.data.map((result, i) =>
-                  <TableRow key={i} data={result} updateBox={this.updateTag} />)}
+                  <TableRow key={i} data={result} updateBox={this.cleanInputBox} />)}
               </tbody>
             </table>
           </div>

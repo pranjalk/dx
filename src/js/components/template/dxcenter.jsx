@@ -1,14 +1,11 @@
 import React from 'react';
-import Searchbar from '../parts/searchbar.jsx';
+import HeaderStrip from '../parts/header.jsx';
 
 class DxCenter extends React.Component {
   render() {
     return (
       <div className="main-box">
-        <div className="text-box">
-          <img className="logo" src="./img/dxlogo.png" alt="logo" />
-            <Searchbar />
-        </div>
+        <HeaderStrip />
       </div>
     );
   }

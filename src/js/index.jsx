@@ -14,12 +14,9 @@ class App extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={MainPage}>
-          <Route path="/dxcenter" component={MainPage}>
-            <Route path=":id" component={DxCenter} />
-          </Route>
-          <Route path="404" component={Error404} />
-        </Route>
+        <Route path="/" component={MainPage} />
+        <Route path="/dxcenter/:id" component={DxCenter} />
+        <Route path="/404" component={Error404} />
         <Route path="*" component={Error404} />
       </Router>
     );

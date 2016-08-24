@@ -1,22 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Searchbar from './searchbar.jsx';
 
 class Headerstrip extends React.Component {
-   render() {
-      return (
-        <div className="topstrip">
-            <div id="logobox">
-              <img id="logo" src="../../../dist/img/dxlogo.png"></img>
-            </div>
-            <div id="searchbox">
-              <Searchbar />
-            </div>
-            <div id="loginbox"> 
-              <Login />
-            </div>  
-          </div>
-      );
-   }
+  render() {
+    return (
+      <div className="header-strip">
+        <div className="header-logo-position">
+          <img className="header-logo" src="./img/dxlogo.png" alt="logo" />
+        </div>
+        <div className="header-search-bar">
+          <Searchbar />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Headerstrip;
