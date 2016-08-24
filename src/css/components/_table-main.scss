@@ -1,0 +1,6 @@
+.table-main {
+  width: 100%;
+  top: -5px;
+  background: rgba(0,0,0,0);
+  @include horizontal_align();
+}

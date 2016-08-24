@@ -5,9 +5,9 @@ Simple workflow for ordering diagnostic tests online
 Created for JS Hello World Project
 
 ## Tech (MERN Stack)
-  - MariaDB v10.1.13 (Stable LTS) - Relational Database Management
-  - Express v4.14.0 (Stable) - fast node.js network app framework
-  - ReactJS v15.3 (Latest) -HTML enhanced for User Interfaces
+  - MariaDB v10.1.13 (Stable LTS) - Relational Database Management [![npm version](https://badge.fury.io/js/mysql.svg)](https://badge.fury.io/js/mysql)
+  - Express v4.14.0 (Stable) - fast node.js network app framework [![npm version](https://badge.fury.io/js/express.svg)](https://badge.fury.io/js/express)
+  - ReactJS v15.3 (Latest) -HTML enhanced for User Interfaces [![npm version](https://badge.fury.io/js/react.svg)](https://badge.fury.io/js/react)
   - Node.js v6.3.1 (Latest) - evented I/O for the backend
 
 ## Setting up the environment

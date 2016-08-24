@@ -1,0 +1,7 @@
+.logo{
+  width: auto;
+  height: 80px;
+  position: relative;
+  display: block;
+  @include horizontal_align();
+ } 
