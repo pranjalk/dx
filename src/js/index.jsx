@@ -1,13 +1,13 @@
 // Default react go here
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
+import { Router, Route, hashHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import store from './redux/store.jsx';
 
-// Self created components go here
+
 import Error404 from './components/template/40x.jsx';
 import MainPage from './components/template/index.jsx';
-
-// Store and router go here
 
 class App extends React.Component {
   render() {
@@ -20,4 +20,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('main-wrapper'));
+ReactDOM.render(<Provider store={store}><App /></Provider>,
+  document.getElementById('main-wrapper'));
