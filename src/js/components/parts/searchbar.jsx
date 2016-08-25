@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getResults, cleanResults } from '../../redux/actions/searchActions.jsx';
-import { getDisplayResults } from '../../redux/actions/displayActions.jsx';
+import { getDisplayResults, getDxTestResults } from '../../redux/actions/displayActions.jsx';
 import TableRow from './searchrows.jsx';
 
 @connect((store) => (
   {
     data: store.search.result,
-    searchInput: store.search.searchInput,
+    searchInput: store.search.searchInput
   }
 ))
 
@@ -22,6 +22,7 @@ class Searchbar extends React.Component {
   }
   clearInputValue(id) {
     this.props.dispatch(getDisplayResults(id));
+    this.props.dispatch(getDxTestResults(id));
     this.props.dispatch(cleanResults());
     this.forceUpdate();
   }
@@ -61,7 +62,7 @@ class Searchbar extends React.Component {
 Searchbar.propTypes = {
   searchInput: React.PropTypes.string,
   data: React.PropTypes.object,
-  dispatch: React.PropTypes.func,
+  dispatch: React.PropTypes.func
 };
 
 export default Searchbar;

@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": "practo",
   "plugins": [
         "react",
         "jsx-a11y",

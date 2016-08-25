@@ -16,6 +16,6 @@ export function cleanResults() {
   return {
     type: 'SEARCH_CLEAN_RESULT',
     data: null,
-    searchString: '',
+    searchString: ''
   };
 }

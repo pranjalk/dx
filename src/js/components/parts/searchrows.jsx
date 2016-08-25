@@ -20,7 +20,7 @@ TableRow.propTypes = {
   updateBox: React.PropTypes.func,
   data: React.PropTypes.object,
   id: React.PropTypes.number,
-  name: React.PropTypes.string,
+  name: React.PropTypes.string
 };
 
 export default TableRow;

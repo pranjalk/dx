@@ -12,9 +12,21 @@ export function getDisplayResults(str) {
   };
 }
 
+export function getDxTestResults(str) {
+  return dispatch => {
+    request
+      .get('http://localhost:3000/dxtests')
+      .query({ q: str })
+      .end((error, response) => {
+        const dataRecieved = JSON.parse(response.text);
+        dispatch({ type: 'DISPLAY_TEST_RESULT', data: dataRecieved.result });
+      });
+  };
+}
+
 export function cleanDisplayResults() {
   return {
     type: 'DISPLAY_CLEAN_RESULT',
-    data: null,
+    data: null
   };
 }

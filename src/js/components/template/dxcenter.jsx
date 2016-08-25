@@ -19,7 +19,7 @@ class DxCenter extends React.Component {
 
 DxCenter.propTypes = {
   params: React.PropTypes.object,
-  id: React.PropTypes.string,
+  id: React.PropTypes.string
 };
 
 export default DxCenter;
