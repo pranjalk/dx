@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Loginformat extends React.Component {
   render() {
@@ -7,8 +6,8 @@ class Loginformat extends React.Component {
       <div id="login">
         <span id="heading">Diagnostics &nbsp; &nbsp; &nbsp;</span>
         <form action="/dologin" method="POST">
-          <input type="email" name="loginemail" placeholder="email  "></input>
-          <input type="password" name="loginpassword" placeholder=" password  "></input>
+          <input type="email" name="loginemail" placeholder="email  " />
+          <input type="password" name="loginpassword" placeholder=" password  " />
           <button id="clickbutton">Login</button>
         </form>
       </div>
