@@ -46,12 +46,8 @@ class Searchbar extends React.Component {
             value={this.props.searchInput}
           />
           <div className="live-search-data">
-            <table className="table-main">
-              <tbody>
-                {this.props.data.map((result, i) =>
-                  <TableRow key={i} data={result} updateBox={this.clearInputValue} />)}
-              </tbody>
-            </table>
+            {this.props.data.map((result, i) =>
+              <TableRow key={i} data={result} updateBox={this.clearInputValue} />)}
           </div>
         </form>
       </div>

@@ -5,13 +5,11 @@ class TableRow extends React.Component {
 
   render() {
     return (
-      <tr className="table-main__row">
-        <td className="table-main__data">
-          <Link to={'/dxcenter/' + this.props.data.id} onClick={this.props.updateBox.bind(this, this.props.data.id)}>
-              {this.props.data.name}
-          </Link>
-        </td>
-      </tr>
+      <div className='c-search-results'>
+        <Link to={'/dxcenter/' + this.props.data.id} onClick={this.props.updateBox.bind(this, this.props.data.id)}>
+            {this.props.data.name}
+        </Link>
+      </div>
     );
   }
 }

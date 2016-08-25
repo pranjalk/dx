@@ -9,10 +9,9 @@ import { getDisplayResults, getDxTestResults } from '../../redux/actions/display
   }
 ))
 class DxDetails extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(getDisplayResults(this.props.propId));
     this.props.dispatch(getDxTestResults(this.props.propId));
-    console.log(this.props.dxtests);
   }
   render() {
     return (
@@ -27,10 +26,6 @@ class DxDetails extends React.Component {
         <div className="c-dx-strip">
           <div className="c-dx-center-description">{this.props.data.description}</div>
         </div>
-        <div className="c-dx-strip">
-          <div className="c-dx-center-description">{this.props.data.description}</div>
-        </div>
-
       </div>
     );
   }
