@@ -1,0 +1,11 @@
+.c-dx-strip {
+  @include border_style(.1em, 1px, green);
+  @include horizontal_align();
+  background: rgba(255,255,255, .2);
+  display: block;
+  margin-bottom: 5px;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}

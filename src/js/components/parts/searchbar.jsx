@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getResults, cleanResults } from '../../redux/actions/searchActions.jsx';
+import { getDisplayResults } from '../../redux/actions/displayActions.jsx';
 import TableRow from './searchrows.jsx';
 
 @connect((store) => (
@@ -14,13 +15,13 @@ class Searchbar extends React.Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
-    this.cleanInputBox = this.cleanInputBox.bind(this);
+    this.clearInputValue = this.clearInputValue.bind(this);
   }
   componentWillMount() {
     this.props.dispatch(cleanResults());
-    this.forceUpdate();
   }
-  cleanInputBox() {
+  clearInputValue(id) {
+    this.props.dispatch(getDisplayResults(id));
     this.props.dispatch(cleanResults());
     this.forceUpdate();
   }
@@ -47,7 +48,7 @@ class Searchbar extends React.Component {
             <table className="table-main">
               <tbody>
                 {this.props.data.map((result, i) =>
-                  <TableRow key={i} data={result} updateBox={this.cleanInputBox} />)}
+                  <TableRow key={i} data={result} updateBox={this.clearInputValue} />)}
               </tbody>
             </table>
           </div>

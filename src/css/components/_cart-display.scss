@@ -1,0 +1,10 @@
+.cart-display {
+  @include border_style(.1em, 1px, green);
+  background: rgba(255,255,255, 0.5);
+  box-sizing: border-box;
+  display: block;
+  float: right;
+  height: 98%;
+  margin: 3px;
+  width: 25%;
+}

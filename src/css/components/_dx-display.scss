@@ -1,0 +1,11 @@
+.dx-display {
+  @include border_style(.1em, 1px, green);
+  background: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  height: 98%;
+  margin: 3px;
+  width: 74%;
+  padding: 5px;
+}

@@ -1,10 +1,12 @@
+@import 'cart-display';
+@import 'dx-display';
 @import 'fourofourdescription';
 @import 'fourzerofour';
 @import 'header-logo-position';
 @import 'header-logo';
 @import 'header-search-bar';
 @import 'header-strip';
-@import 'live-search-data.scss';
+@import 'live-search-data';
 @import 'logo';
 @import 'search-bar';
 @import 'search-bar__input';
@@ -12,3 +14,9 @@
 @import 'table-main';
 @import 'table-main__row';
 @import 'table-main__data';
+@import 'dx-body-box';
+@import 'c-dx-strip';
+@import 'c-dx-center-name';
+@import 'c-dx-center-phone';
+@import 'c-dx-center-address';
+@import 'c-dx-center-description';

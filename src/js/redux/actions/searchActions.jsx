@@ -7,14 +7,15 @@ export function getResults(str) {
       .query({ q: str })
       .end((error, response) => {
         const dataRecieved = JSON.parse(response.text);
-        dispatch({ type: 'FETCH_RESULT', data: dataRecieved.result, searchString: str });
+        dispatch({ type: 'SEARCH_FETCH_RESULT', data: dataRecieved.result, searchString: str });
       });
   };
 }
 
 export function cleanResults() {
   return {
-    type: 'CLEAN_RESULT',
+    type: 'SEARCH_CLEAN_RESULT',
     data: null,
+    searchString: '',
   };
 }

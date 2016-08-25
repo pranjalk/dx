@@ -1,7 +1,8 @@
 .header-strip {
   position: relative;
-  width: 100%;
+  width: 99%;
   height: 5%;
   padding:10px;
   background: $light_green;
+  z-index: +7;
 }

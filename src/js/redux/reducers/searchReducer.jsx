@@ -3,11 +3,11 @@ export default function reducer(state = {
   searchInput: '',
 }, action) {
   switch (action.type) {
-    case 'FETCH_RESULT': {
+    case 'SEARCH_FETCH_RESULT': {
       return { ...state, result: action.data, searchInput: action.searchString };
     }
-    case 'CLEAN_RESULT': {
-      return { ...state, result: [], searchInput: '' };
+    case 'SEARCH_CLEAN_RESULT': {
+      return { ...state, result: [], searchInput: action.searchString };
     }
     default: {
       return { ...state };
