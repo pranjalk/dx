@@ -6,5 +6,4 @@
     margin-top: 5px;
     @include horizontal_align();
     box-sizing: border-box;
-    @include border_style(0.1em, 0.001em, black);
 }

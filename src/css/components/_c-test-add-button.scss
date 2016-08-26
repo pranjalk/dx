@@ -1,0 +1,11 @@
+.c-test-add-button {
+  @include border_style(0,1px,$dark_green);
+  @include font(24px);
+  background: rgba(0,0,0,0);
+  display: inline-block;
+  height: auto;
+  position: relative;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  float: right;
+}
