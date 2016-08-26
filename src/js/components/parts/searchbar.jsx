@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getResults, cleanResults } from '../../redux/actions/searchActions.jsx';
-import { getDisplayResults, getDxTestResults } from '../../redux/actions/displayActions.jsx';
 import TableRow from './searchrows.jsx';
 
 @connect((store) => (
@@ -21,8 +20,6 @@ class Searchbar extends React.Component {
     this.props.dispatch(cleanResults());
   }
   clearInputValue(id) {
-    this.props.dispatch(getDisplayResults(id));
-    this.props.dispatch(getDxTestResults(id));
     this.props.dispatch(cleanResults());
     this.forceUpdate();
   }
@@ -47,7 +44,7 @@ class Searchbar extends React.Component {
           />
           <div className="live-search-data">
             {this.props.data.map((result, i) =>
-              <TableRow key={i} data={result} updateBox={this.clearInputValue} />)}
+              <TableRow key={i} data={result} />)}
           </div>
         </form>
       </div>
