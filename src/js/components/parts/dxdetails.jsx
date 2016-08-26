@@ -27,6 +27,9 @@ class DxDetails extends React.Component {
         <div className="c-dx-strip">
           <div className="c-dx-center-description">{this.props.data.description}</div>
         </div>
+        <div className="c-dx-available-test">
+          Available Tests
+        </div>
         <div className="c-dx-strip">
           {this.props.dxtests.map((result, i) =>
               <AvailableTests key={i} data={result} />)}

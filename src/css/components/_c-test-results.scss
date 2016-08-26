@@ -1,5 +1,5 @@
 .c-test-results {
-  @include border_style(0.1em, 1px, $dark_green);
+  @include border_style(0.1em, 1px, $border_color_dx);
   margin-bottom: 10px;
   padding: 1px;
   overflow-y: scroll;

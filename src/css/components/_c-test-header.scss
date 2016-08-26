@@ -1,4 +1,4 @@
 .c-test-header {
-  @include border_style(0, 0px, $dark_green);
+  @include border_style(0, 0px, $border_color_dx);
   padding: 3px;
 }

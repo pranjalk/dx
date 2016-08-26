@@ -1,5 +1,5 @@
 .c-dx-strip {
-  @include border_style(.1em, 1px, green);
+  @include border_style(.1em, 1px, $border_color_dx);
   @include horizontal_align();
   background: rgba(255,255,255, .2);
   display: block;
@@ -9,5 +9,5 @@
   box-sizing: border-box;
   padding: 10px;
   overflow-y: scroll;
-  max-height: 62%;
+  max-height: 58%;
 }
