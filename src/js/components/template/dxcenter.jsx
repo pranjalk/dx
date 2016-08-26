@@ -9,7 +9,7 @@ class DxCenter extends React.Component {
       <div className="main-box">
         <HeaderStrip />
         <div className="dx-body-box">
-          <DxDetails propId={this.props.params.id} />
+          <DxDetails centerId={this.props.params.id} />
           <Cart />
         </div>
       </div>

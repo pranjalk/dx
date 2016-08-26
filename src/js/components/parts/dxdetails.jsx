@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getDisplayResults, getDxTestResults } from '../../redux/actions/displayActions.jsx';
+import AvailableTests from './availabletests.jsx';
 
 @connect((store) => (
   {
@@ -10,8 +11,8 @@ import { getDisplayResults, getDxTestResults } from '../../redux/actions/display
 ))
 class DxDetails extends React.Component {
   componentWillMount() {
-    this.props.dispatch(getDisplayResults(this.props.propId));
-    this.props.dispatch(getDxTestResults(this.props.propId));
+    this.props.dispatch(getDisplayResults(this.props.centerId));
+    this.props.dispatch(getDxTestResults(this.props.centerId));
   }
   render() {
     return (
@@ -25,6 +26,10 @@ class DxDetails extends React.Component {
         </div>
         <div className="c-dx-strip">
           <div className="c-dx-center-description">{this.props.data.description}</div>
+        </div>
+        <div className="c-dx-strip">
+          {this.props.dxtests.map((result, i) =>
+              <AvailableTests key={i} data={result} />)}
         </div>
       </div>
     );
