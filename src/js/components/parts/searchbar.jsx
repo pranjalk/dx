@@ -6,7 +6,7 @@ import TableRow from './searchrows.jsx';
 @connect((store) => (
   {
     data: store.search.result,
-    searchInput: store.search.searchInput
+    searchInput: store.search.searchInput,
   }
 ))
 

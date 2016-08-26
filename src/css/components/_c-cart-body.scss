@@ -1,0 +1,6 @@
+.c-cart-body {
+  @include border_style(0,1px, $border_color_dx);
+  display: block;
+  height: 80%;
+  width: 100%;
+}

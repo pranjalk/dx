@@ -22,7 +22,7 @@ class TableRow extends React.Component {
   }
   render() {
     return (
-      <div className='c-search-results'>
+      <div className="c-search-results">
         <Link to={'/dxcenter/' + this.props.data.id} onClick={this.clearInputValue}>
             {this.props.data.name}
         </Link>
@@ -32,10 +32,11 @@ class TableRow extends React.Component {
 }
 
 TableRow.propTypes = {
+  dispatch: React.PropTypes.func,
   updateBox: React.PropTypes.func,
   data: React.PropTypes.object,
   id: React.PropTypes.number,
-  name: React.PropTypes.string
+  name: React.PropTypes.string,
 };
 
 export default TableRow;

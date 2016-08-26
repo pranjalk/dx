@@ -1,5 +1,5 @@
-.cart-display {
-  @include border_style(.1em, 1px, green);
+.c-cart-display {
+  @include border_style(.1em, 1px, $border_color_dx);
   background: rgba(255,255,255, 0.5);
   box-sizing: border-box;
   display: block;
@@ -7,4 +7,5 @@
   height: 98%;
   margin: 3px;
   width: 25%;
+  padding: 10px;
 }

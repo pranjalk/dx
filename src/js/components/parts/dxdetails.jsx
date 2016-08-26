@@ -6,7 +6,7 @@ import AvailableTests from './availabletests.jsx';
 @connect((store) => (
   {
     data: store.display.display_result,
-    dxtests: store.display.dx_tests
+    dxtests: store.display.dx_tests,
   }
 ))
 class DxDetails extends React.Component {
@@ -40,9 +40,11 @@ class DxDetails extends React.Component {
 }
 
 DxDetails.propTypes = {
+  centerId: React.PropTypes.string,
   data: React.PropTypes.object,
   propId: React.PropTypes.string,
-  dispatch: React.PropTypes.func
+  dispatch: React.PropTypes.func,
+  checktests: React.PropTypes.object,
 };
 
 export default DxDetails;
