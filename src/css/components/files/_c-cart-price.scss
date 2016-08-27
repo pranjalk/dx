@@ -1,5 +1,5 @@
 .c-cart-price{
-  @include border_style(0, 1px, $medium_green);
+  @include border_style(0, 0px, $medium_green);
   @include font(24px);
   display: inline-block;
   width: 100%;

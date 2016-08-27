@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Searchbar from './searchbar.jsx';
 
 class Headerstrip extends React.Component {
@@ -6,7 +7,9 @@ class Headerstrip extends React.Component {
     return (
       <div className="header-strip">
         <div className="header-logo-position">
-          <img className="header-logo" src="./img/dxlogo.png" alt="logo" />
+          <Link to={'/'}>
+            <img className="header-logo" src="./img/dxlogo.png" alt="logo" />
+          </Link>
         </div>
         <div className="header-search-bar">
           <Searchbar />
