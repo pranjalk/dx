@@ -1,19 +1,29 @@
 export default function reducer(state = {
-  cart: [],
+  cart: {},
   price: 0,
   checkTests: [],
 }, action) {
   switch (action.type) {
     case 'CART_ADD': {
-      const updatedCart = state.cart.concat(action.data);
-      const priceNew = updatedCart.reduce((acc, test) => {
-        return acc + test.price;
-      }, 0);
-      const updatedcheckTests = state.checkTests.concat(action.data.test_id);
-      return { ...state, cart: updatedCart, price: priceNew, checkTests: updatedcheckTests };
+      // console.log('data entered in reducer is', action.data);
+      let newCart = {};
+      if (Object.keys(state.cart).length === 0 && state.cart.constructor === Object) {
+        const dataToEnterInCart = {};
+        dataToEnterInCart[action.data.test_id] = action.data;
+        newCart = Object.assign({}, dataToEnterInCart);
+      } else {
+        const dataToEnterInCart = {};
+        dataToEnterInCart[action.data.test_id] = action.data;
+        newCart = Object.assign({}, state.cart);
+        newCart[action.data.test_id] = action.data;
+        // console.log('new data entering in is', newCart);
+      }
+      const priceNew = state.price + action.data.price;
+
+      return { ...state, cart: newCart, price: priceNew };
     }
     case 'CART_CLEAN': {
-      return { ...state, cart: [], price: 0, checkTests: {} };
+      return { ...state, cart: {}, price: 0, checkTests: [] };
     }
     default: {
       return { ...state };

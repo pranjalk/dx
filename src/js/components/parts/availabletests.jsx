@@ -1,21 +1,23 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { addItemToCart } from '../../redux/actions/cartActions.jsx';
 
-@connect((store) => (
-  {
-    checktests: store.cart.checkTests,
-  }
-))
 class AvailableTests extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.addToCart = this.addToCart.bind(this);
+  constructor() {
+    super();
+    this.clickEvent = this.clickEvent.bind(this);
   }
-  addToCart() {
-    this.props.dispatch(addItemToCart(this.props.data));
-    this.forceUpdate();
+  clickEvent() {
+    this.props.addItem(this.props.data);
+  }
+  checkIfItemAlreadyAdded() {
+    if (this.props.data.test_id in this.props.cartShow) {
+      return (<button className="c-test-add-button">
+        Added
+      </button>);
+    } else {
+      return (<button className="c-test-add-button" onClick={this.clickEvent}>
+        Add to Cart
+      </button>);
+    }
   }
   render() {
     return (
@@ -31,22 +33,18 @@ class AvailableTests extends React.Component {
         <div className="c-test-body">
             {this.props.data.description}
         </div>
-        <button className="c-test-add-button" onClick={this.addToCart}>
-          Add to Cart
-      </button>
+        {this.checkIfItemAlreadyAdded()}
       </div>
     );
   }
 }
-
 AvailableTests.propTypes = {
-  checktests: React.PropTypes.object,
-  sendToCart: React.PropTypes.object,
-  dispatch: React.PropTypes.func,
+  addItem: React.PropTypes.func,
   data: React.PropTypes.object,
   name: React.PropTypes.string,
   price: React.PropTypes.string,
   description: React.PropTypes.string,
+  cartShow: React.PropTypes.object,
 };
 
 export default AvailableTests;

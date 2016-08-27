@@ -19,7 +19,7 @@ export function getDxTestResults(str) {
       .query({ q: str })
       .end((error, response) => {
         const dataRecieved = JSON.parse(response.text);
-        dispatch({ type: 'DISPLAY_TEST_RESULT', data: dataRecieved.result });
+        dispatch({ type: 'DISPLAY_TEST_RESULT', data: dataRecieved });
       });
   };
 }
@@ -27,6 +27,6 @@ export function getDxTestResults(str) {
 export function cleanDisplayResults() {
   return {
     type: 'DISPLAY_CLEAN_RESULT',
-    data: null
+    data: null,
   };
 }

@@ -13,7 +13,11 @@ module.exports = (app, sequelize) => {
         type: sequelize.QueryTypes.SELECT,
       })
       .then((myTableRows) => {
-        res.end(JSON.stringify({ result: myTableRows }));
+        const resultObject = {};
+        for (let i = 0; i < myTableRows.length; i++) {
+          resultObject[myTableRows[i].test_id] = myTableRows[i];
+        }
+        res.end(JSON.stringify(resultObject));
       })
       .catch((err) => {
         console.log('SOMETHING WENT WRONG!', err);
