@@ -8,7 +8,6 @@ import AvailableTests from './availabletests.jsx';
   {
     data: store.display.display_result,
     dxtests: store.display.dx_tests,
-    checktests: store.cart.checkTests,
     cart: store.cart.cart,
   }
 ))
@@ -22,7 +21,13 @@ class DxDetails extends React.Component {
     this.props.dispatch(getDxTestResults(this.props.centerId));
   }
   addToCart(data) {
-    this.props.dispatch(addItemToCart(data));
+    const dataToSend = {};
+    dataToSend.name = data.name;
+    dataToSend.dx_id = data.dx_id;
+    dataToSend.test_id = data.test_id;
+    dataToSend.price = data.price;
+    // console.log('sending this data', dataToSend);
+    this.props.dispatch(addItemToCart(dataToSend));
   }
   render() {
     return (

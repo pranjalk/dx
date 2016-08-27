@@ -9,10 +9,17 @@ class AvailableTests extends React.Component {
     this.props.addItem(this.props.data);
   }
   checkIfItemAlreadyAdded() {
-    if (this.props.data.test_id in this.props.cartShow) {
-      return (<button className="c-test-add-button">
+    console.log('my cart is ', this.props.cartShow);
+    if (this.props.data.dx_id in this.props.cartShow) {
+      if (this.props.data.test_id in this.props.cartShow[this.props.data.dx_id].cart) {
+        return (<button className="c-test-add-button">
         Added
-      </button>);
+        </button>);
+      } else {
+        return (<button className="c-test-add-button" onClick={this.clickEvent}>
+        Add to Cart
+        </button>);
+      }
     } else {
       return (<button className="c-test-add-button" onClick={this.clickEvent}>
         Add to Cart

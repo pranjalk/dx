@@ -1,7 +1,6 @@
 export default function reducer(state = {
   cart: {},
   price: 0,
-  checkTests: [],
 }, action) {
   switch (action.type) {
     case 'CART_ADD': {
@@ -9,21 +8,26 @@ export default function reducer(state = {
       let newCart = {};
       if (Object.keys(state.cart).length === 0 && state.cart.constructor === Object) {
         const dataToEnterInCart = {};
-        dataToEnterInCart[action.data.test_id] = action.data;
         newCart = Object.assign({}, dataToEnterInCart);
       } else {
-        const dataToEnterInCart = {};
-        dataToEnterInCart[action.data.test_id] = action.data;
         newCart = Object.assign({}, state.cart);
-        newCart[action.data.test_id] = action.data;
-        // console.log('new data entering in is', newCart);
       }
+      if (!(action.data.dx_id in newCart)) { // if no dx center in object add dxc center
+        newCart[action.data.dx_id] = {};
+        newCart[action.data.dx_id].name = action.data.dxname; // set dx center name
+      }
+      if (!('cart' in newCart[action.data.dx_id])) {
+        newCart[action.data.dx_id].cart = {};
+      }
+      newCart[action.data.dx_id].cart[action.data.test_id] = {};
+      newCart[action.data.dx_id].cart[action.data.test_id].name = action.data.name;
+      newCart[action.data.dx_id].cart[action.data.test_id].price = action.data.price;
       const priceNew = state.price + action.data.price;
-
+      // console.log('newCart is', newCart);
       return { ...state, cart: newCart, price: priceNew };
     }
     case 'CART_CLEAN': {
-      return { ...state, cart: {}, price: 0, checkTests: [] };
+      return { ...state, cart: {}, price: 0 };
     }
     default: {
       return { ...state };
