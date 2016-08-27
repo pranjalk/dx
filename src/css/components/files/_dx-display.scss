@@ -7,7 +7,8 @@
   float: left;
   height: 98%;
   margin: 3px;
-  width: 75%;
+  min-width: 30%;
+  max-width: 75%;
   padding: 5px;
   overflow-y: scroll;
 }

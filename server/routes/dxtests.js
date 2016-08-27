@@ -1,7 +1,8 @@
 module.exports = (app, sequelize) => {
   app.get('/dxtests', (req, res) => {
     const inputString = req.query.q;
-    let queryPartOne = 'SELECT name, description, price, `dx_tests`.`dx_id`, `tests_list`.`id` as test_id from `tests_list` ';
+    let queryPartOne = 'SELECT name, description, price, ';
+    queryPartOne += '`dx_tests`.`dx_id`, `tests_list`.`id` as test_id from `tests_list` ';
     queryPartOne += 'INNER JOIN `dx_tests` ';
     queryPartOne += 'ON `tests_list`.`id` = `dx_tests`.`test_id` ';
     queryPartOne += 'WHERE `dx_tests`.`dx_id` = :search_name';

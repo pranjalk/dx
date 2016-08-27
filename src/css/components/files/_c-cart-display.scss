@@ -2,8 +2,8 @@
   @include border_style(.1em, 1px, $border_color_dx);
   background: rgba(255,255,255, 0.5);
   box-sizing: border-box;
-  display: block;
-  float: right;
+  display: inline-block;
+  float: left;
   height: 98%;
   margin: 3px;
   min-width: 24%;
