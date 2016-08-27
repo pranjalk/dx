@@ -1,0 +1,10 @@
+.c-cart-price{
+  @include border_style(0, 1px, $medium_green);
+  @include font(24px);
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  text-align: right;
+  margin-top: 4px;
+}

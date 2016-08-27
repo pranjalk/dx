@@ -1,8 +1,8 @@
 .c-test-add-button {
-  @include border_style(0,1px, $border_color_dx);
+  @include border_style(0, 0px, $border_color_dx);
   @include font(24px);
-  background: $medium_green;
-  color: white;
+  background: none;
+  color: black;
   display: inline-block;
   height: auto;
   position: relative;

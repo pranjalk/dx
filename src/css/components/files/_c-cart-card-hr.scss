@@ -1,0 +1,6 @@
+.c-cart-card-hr{
+  @include horizontal_align();
+  display: block;
+  width: 100%;
+  border-color: $medium_green;
+}

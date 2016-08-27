@@ -39,9 +39,6 @@ class DxDetails extends React.Component {
         <div className="c-dx-strip">
           <div className="c-dx-center-address">{this.props.data.address}</div>
         </div>
-        <div className="c-dx-strip">
-          <div className="c-dx-center-description">{this.props.data.description}</div>
-        </div>
         <div className="c-dx-available-test">
           Available Tests
         </div>
@@ -55,7 +52,6 @@ class DxDetails extends React.Component {
             />
             )
           }
-        }
         </div>
       </div>
     );

@@ -1,0 +1,8 @@
+.c-cart-card {
+  @include border_style(0.1em,1px, $medium_green);
+  padding: 10px;
+  margin: 5px;
+  background: $ultra_green;
+  display: block;
+  box-sizing: border-box;
+}

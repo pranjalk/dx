@@ -6,6 +6,8 @@
   float: left;
   height: 98%;
   margin: 3px;
-  width: 74%;
+  min-width: 20%;
+  max-width: 75%;
   padding: 5px;
+  overflow-y: scroll;
 }

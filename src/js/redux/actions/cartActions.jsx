@@ -13,3 +13,11 @@ export function addItemToCart(items) {
       });
   };
 }
+
+export function cleanCart() {
+  return {
+    type: 'CART_CLEAN',
+    data: null,
+    price: 0,
+  };
+}

@@ -15,32 +15,42 @@ class Searchbar extends React.Component {
     super();
     this.handleChange = this.handleChange.bind(this);
     this.clearInputValue = this.clearInputValue.bind(this);
+    this.delayedClearInputValue = this.delayedClearInputValue.bind(this);
   }
   componentWillMount() {
     this.props.dispatch(cleanResults());
   }
-  clearInputValue(id) {
+  delayedClearInputValue(e) {
+    e.persist();
+    setTimeout(() => { this.props.dispatch(cleanResults()); }, 2000);
+  }
+  clearInputValue() {
     this.props.dispatch(cleanResults());
     this.forceUpdate();
   }
   handleChange(enteredData) {
+    enteredData.persist();
+    const stringData = enteredData.target.value;
     if (enteredData.target.value === '') {
       this.props.dispatch(cleanResults());
     } else {
-      this.props.dispatch(getResults(enteredData.target.value));
+      setTimeout(() => { this.props.dispatch(getResults(stringData)); }, 200);
     }
     this.forceUpdate();
   }
   render() {
     return (
-      <div className="search-bar">
+      <div
+        className="search-bar"
+      >
         <form className="search-form">
           <input
             type="text"
             className="search-bar__input"
             placeholder="Search for labs..."
             onChange={this.handleChange}
-            value={this.props.searchInput}
+            onFocus={this.handleChange}
+            onBlur={this.delayedClearInputValue}
           />
           <div className="live-search-data">
             {this.props.data.map((result, i) =>
