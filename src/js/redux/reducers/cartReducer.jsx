@@ -16,10 +16,10 @@ export default function reducer(state = {
         newCart[action.data.dx_id] = {};
         newCart[action.data.dx_id].name = action.data.dxname; // set dx center name
       }
-      if (!('cart' in newCart[action.data.dx_id])) {
+      if (!('cart' in newCart[action.data.dx_id])) { // create new cart if does not exist already
         newCart[action.data.dx_id].cart = {};
       }
-      newCart[action.data.dx_id].cart[action.data.test_id] = {};
+      newCart[action.data.dx_id].cart[action.data.test_id] = {}; // create new test entry
       newCart[action.data.dx_id].cart[action.data.test_id].name = action.data.name;
       newCart[action.data.dx_id].cart[action.data.test_id].price = action.data.price;
       const priceNew = state.price + action.data.price;
