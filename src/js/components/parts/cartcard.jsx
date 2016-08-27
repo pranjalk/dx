@@ -27,6 +27,7 @@ export default class CartCard extends React.Component {
     );
   }
 }
+
 CartCard.propTypes = {
   dxcart: React.PropTypes.object,
 };

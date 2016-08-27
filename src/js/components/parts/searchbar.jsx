@@ -65,7 +65,7 @@ class Searchbar extends React.Component {
 Searchbar.propTypes = {
   searchInput: React.PropTypes.string,
   data: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  dispatch: React.PropTypes.func,
 };
 
 export default Searchbar;
