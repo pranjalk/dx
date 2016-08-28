@@ -33,10 +33,11 @@ class Cart extends React.Component {
     const r = confirm('Are you sure, you want clear you cart?');
     if (r === true) {
       this.props.dispatch(cleanCart());
+      if (/\/checkout/i.test(this.props.currentLocation)) {
+        this.goBack();
+      }
     }
-    if (/\/checkout/i.test(this.props.currentLocation)) {
-      this.goBack();
-    }
+    
   }
   whereIsCart() {
     if (/\/dxcenter\/\d/i.test(this.props.currentLocation)) {

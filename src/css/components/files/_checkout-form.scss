@@ -1,0 +1,6 @@
+.checkout-form{
+  @include border_style(0, 1px, black);
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
