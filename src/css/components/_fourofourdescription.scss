@@ -3,3 +3,9 @@
   @include font(40px);
   @include horizontal_align();
 }
+
+.fourofour {
+  text-align: center;
+  @include font(200px);
+}
+

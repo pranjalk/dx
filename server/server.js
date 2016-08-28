@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const Sequelize = require('sequelize');
 const dbConfig = require('../config/dbConfig.js');
-
+const port = process.env.PORT || 3000;
 const app = express();
 
 const sequelize = new Sequelize(dbConfig.name, dbConfig.user, dbConfig.password, {
@@ -34,6 +34,6 @@ app.get('/', (req, res) => {
   res.render('index.html');
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('dx server listening on port 3000!');
 });

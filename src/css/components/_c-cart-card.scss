@@ -1,0 +1,51 @@
+.c-cart-card {
+  @include border_style(0.1em,1px, $medium_green);
+  padding: 10px;
+  margin: 5px;
+  background: $ultra_green;
+  display: block;
+  box-sizing: border-box;
+}
+
+.c-cart-card-body{
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.c-cart-card-entry-name {
+  @include font(20px);
+  display: inline-block;
+  height: auto;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.c-cart-card-header {
+  @include font(22px);
+}
+
+.c-cart-card-hr{
+  @include horizontal_align();
+  display: block;
+  width: 100%;
+  @include border_style(0, 0, $medium_green) ;
+}
+
+.c-cart-card-entry-price{
+  @include font(20px);
+  display: inline-block;
+  height: auto;
+  float: right;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.c-cart-card-entry {
+  @include horizontal_align();
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 3px;
+  height: auto;
+}

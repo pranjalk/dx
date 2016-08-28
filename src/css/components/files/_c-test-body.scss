@@ -1,7 +1,0 @@
-.c-test-body {
-  @include border_style (0, 0px, $border_color_dx);
-  @include font(14px);
-  margin-top: 5px;
-  text-align: justify;
-  padding: 5px;
-}
