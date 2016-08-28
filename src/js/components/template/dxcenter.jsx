@@ -11,7 +11,7 @@ class DxCenter extends React.Component {
         <div className="dx-body-box">
           <DxDetails centerId={this.props.params.id} />
           <div className="c-cart-display">
-            <Cart />
+            <Cart currentLocation={this.props.location.pathname} />
           </div>
         </div>
       </div>
@@ -22,6 +22,8 @@ class DxCenter extends React.Component {
 DxCenter.propTypes = {
   params: React.PropTypes.object,
   id: React.PropTypes.string,
+  location: React.PropTypes.object,
+  pathname: React.PropTypes.string,
 };
 
 export default DxCenter;

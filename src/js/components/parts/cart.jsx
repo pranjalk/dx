@@ -16,6 +16,8 @@ class Cart extends React.Component {
     super();
     this.clearCart = this.clearCart.bind(this);
     this.checkOutCart = this.checkOutCart.bind(this);
+    this.whereIsCart = this.whereIsCart.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
   checkOutCart() {
     if (this.props.price === 0) {
@@ -24,12 +26,56 @@ class Cart extends React.Component {
       hashHistory.push('/checkout');
     }
   }
+  goBack() {
+    window.history.back();
+  }
   clearCart() {
     const r = confirm('Are you sure, you want clear you cart?');
     if (r === true) {
       this.props.dispatch(cleanCart());
     }
+    if (/\/checkout/i.test(this.props.currentLocation)) {
+      this.goBack();
+    }
   }
+  whereIsCart() {
+    if (/\/dxcenter\/\d/i.test(this.props.currentLocation)) {
+      //console.log('Yay we are in dxcenter!');
+      return (
+        <div>
+          <button
+            className="c-cart-buttons"
+            onClick={this.clearCart}
+          >
+            Clear
+          </button>
+          <button className="c-cart-buttons" onClick={this.checkOutCart}>
+            Checkout!
+          </button>
+        </div>
+      );
+
+    } else if (/\/checkout/i.test(this.props.currentLocation)) {
+      console.log('Yay we are in checkout page!');
+      return (
+        <div>
+          <button
+            className="c-cart-buttons"
+            onClick={this.clearCart}
+          >
+            Clear
+          </button>
+          <button
+            className="c-cart-buttons"
+            onClick={this.goBack}
+          >
+            Back
+          </button>
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
       <div className="c-cart-wrapper">
@@ -51,14 +97,7 @@ class Cart extends React.Component {
         <div className="c-cart-price">
           Total &#8377;{this.props.price}
         </div>
-        <div>
-          <button className="c-cart-buttons" onClick={this.clearCart}>
-            Clear
-          </button>
-          <button className="c-cart-buttons" onClick={this.checkOutCart}>
-              Checkout!
-          </button>
-        </div>
+          {this.whereIsCart()}
       </div>
     );
   }
@@ -67,6 +106,7 @@ Cart.propTypes = {
   dispatch: React.PropTypes.func,
   price: React.PropTypes.number,
   cart: React.PropTypes.object,
+  currentLocation: React.PropTypes.string,
 };
 
 export default Cart;
