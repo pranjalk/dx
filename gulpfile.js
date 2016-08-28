@@ -7,7 +7,7 @@ const rename = require('gulp-rename');
 
 gulp.task('default', ['styles', 'scripts']);
 
-gulp.task('styles', () => {
+gulp.task('styles', function() {
   return gulp.src('./dist/css/styles.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -19,11 +19,10 @@ gulp.task('styles', () => {
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
-gulp.task('scripts', () =>{
+gulp.task('scripts', function() {
   return gulp.src('./dist/js/index.js')
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
-
