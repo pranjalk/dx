@@ -26,7 +26,6 @@ class DxDetails extends React.Component {
     dataToSend.dx_id = data.dx_id;
     dataToSend.test_id = data.test_id;
     dataToSend.price = data.price;
-    // console.log('sending this data', dataToSend);
     this.props.dispatch(addItemToCart(dataToSend));
   }
   render() {

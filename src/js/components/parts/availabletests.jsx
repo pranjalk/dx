@@ -9,7 +9,6 @@ class AvailableTests extends React.Component {
     this.props.addItem(this.props.data);
   }
   returnButtonIfItemAlreadyAdded() {
-    // console.log('my cart is ', this.props.cartShow);
     if (this.props.data.dx_id in this.props.cartShow) {
       if (this.props.data.test_id in this.props.cartShow[this.props.data.dx_id].cart) {
         return (<button className="c-test-add-button">

@@ -40,7 +40,6 @@ class Cart extends React.Component {
   }
   whereIsCart() {
     if (/\/dxcenter\/\d/i.test(this.props.currentLocation)) {
-      //console.log('Yay we are in dxcenter!');
       return (
         <div>
           <button
@@ -56,7 +55,6 @@ class Cart extends React.Component {
       );
 
     } else if (/\/checkout/i.test(this.props.currentLocation)) {
-      console.log('Yay we are in checkout page!');
       return (
         <div>
           <button
