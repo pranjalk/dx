@@ -8,7 +8,7 @@ class AvailableTests extends React.Component {
   clickEvent() {
     this.props.addItem(this.props.data);
   }
-  checkIfItemAlreadyAdded() {
+  returnButtonIfItemAlreadyAdded() {
     // console.log('my cart is ', this.props.cartShow);
     if (this.props.data.dx_id in this.props.cartShow) {
       if (this.props.data.test_id in this.props.cartShow[this.props.data.dx_id].cart) {
@@ -49,7 +49,7 @@ class AvailableTests extends React.Component {
         <div className="c-test-body">
             {this.props.data.description}
         </div>
-        {this.checkIfItemAlreadyAdded()}
+        {this.returnButtonIfItemAlreadyAdded()}
       </div>
     );
   }
