@@ -1,0 +1,67 @@
+.c-cart-body-scroll {
+  max-height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.c-cart-body {
+  @include border_style(0,0px, $border_color_dx);
+  display: block;
+  height: 75%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.c-cart-buttons {
+  @include font(24px);
+  @include border_style(0, 1px, white);
+  background: $medium_green;
+  color: black;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  margin-top: 5px;
+}
+
+.c-cart-display {
+  @include border_style(.1em, 1px, $border_color_dx);
+  background: rgba(255,255,255, 0.5);
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  height: 98%;
+  margin: 3px;
+  min-width: 24%;
+  max-width: 30%;
+  padding: 10px;
+}
+
+.c-cart-header {
+  @include font(42px);
+  display: block;
+  position: relative;
+  top: -10px;
+  text-align: left;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.c-cart-price{
+  @include border_style(0, 0px, $medium_green);
+  @include font(24px);
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.c-cart-wrapper {
+  box-sizing: border-box;
+  background: none;
+  height: 100%;
+  width: 100%;
+  display: block;
+}

@@ -1,0 +1,11 @@
+.c-search-results {
+  @include horizontal_align();
+  @include border_style(0.1em, 0.001em, black);
+  @include font(28px); 
+  background: rgba(255, 255, 255, 1.0);
+  padding: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  overflow-y: scroll;
+}

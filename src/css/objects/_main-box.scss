@@ -1,0 +1,11 @@
+.main-box {
+  @include border_style(0, 10px, $light_green);
+  background: $ultra_green;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}

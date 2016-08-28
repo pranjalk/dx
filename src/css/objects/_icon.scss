@@ -1,0 +1,24 @@
+.icon {
+  display: block;
+  width: 2em;
+  height: 2em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-lab {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  width: 1em;
+  height: 1em;
+}
+
+.icon-shopping-cart {
+  display: inline;
+  position: relative;
+  top: 8px;
+  width: 1em;
+  height: 1em; 
+}

@@ -1,0 +1,5 @@
+.search-form{
+  width: 100%;
+  @include horizontal_align();
+  @include font(24px);
+}

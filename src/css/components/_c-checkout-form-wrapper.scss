@@ -1,0 +1,6 @@
+.c-checkout-form-wrapper {
+  @include horizontal_align();
+  height: 100%;
+  display: block;
+  position: relative;
+}
