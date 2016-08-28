@@ -1,9 +1,10 @@
 import request from 'superagent';
+const apiConfig = require('../../../../config/apiConfig.js');
 
 export function getResults(str) {
   return dispatch => {
     request
-      .get('http://localhost:3000/searchdx')
+      .get('http://' + apiConfig.host + ':' + apiConfig.port + '/searchdx')
       .query({ q: str })
       .end((error, response) => {
         const dataRecieved = JSON.parse(response.text);

@@ -1,9 +1,10 @@
 import request from 'superagent';
+const apiConfig = require('../../../../config/apiConfig.js');
 
 export function getDisplayResults(str) {
   return dispatch => {
     request
-      .get('http://localhost:3000/dxdetails')
+      .get('http://' + apiConfig.host + ':' + apiConfig.port + '/dxdetails')
       .query({ q: str })
       .end((error, response) => {
         const dataRecieved = JSON.parse(response.text);
@@ -15,7 +16,7 @@ export function getDisplayResults(str) {
 export function getDxTestResults(str) {
   return dispatch => {
     request
-      .get('http://localhost:3000/dxtests')
+      .get('http://' + apiConfig.host + ':' + apiConfig.port + '/dxtests')
       .query({ q: str })
       .end((error, response) => {
         const dataRecieved = JSON.parse(response.text);

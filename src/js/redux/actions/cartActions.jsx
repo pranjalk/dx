@@ -1,9 +1,10 @@
 import request from 'superagent';
+const apiConfig = require('../../../../config/apiConfig.js');
 
 export function addItemToCart(items) {
   return dispatch => {
     request
-      .get('http://localhost:3000/dxdetails')
+      .get('http://' + apiConfig.host+ ':' + apiConfig.port + '/dxdetails')
       .query({ q: items.dx_id })
       .end((error, response) => {
         const dataRecieved = JSON.parse(response.text);
