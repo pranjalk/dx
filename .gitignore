@@ -1,4 +1,5 @@
 node_modules/
 dist/
 config/dbConfig.js
+config/apiConfig.js
 npm-debug.log
