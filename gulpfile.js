@@ -6,7 +6,7 @@ const notify = require('gulp-notify');
 const rename = require('gulp-rename');
 
 
-const stylesfunc = function() {
+const stylesfunc = function () {
   return gulp.src('./dist/css/styles.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -18,7 +18,7 @@ const stylesfunc = function() {
     .pipe(notify({ message: 'Styles task complete' }));
 };
 
-const scriptsfunc = function() {
+const scriptsfunc = function () {
   return gulp.src('./dist/js/index.js')
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
