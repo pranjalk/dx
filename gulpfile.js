@@ -5,9 +5,8 @@ const uglify = require('gulp-uglify');
 const notify = require('gulp-notify');
 const rename = require('gulp-rename');
 
-gulp.task('default', ['styles', 'scripts']);
 
-gulp.task('styles', function() {
+const stylesfunc = function() {
   return gulp.src('./dist/css/styles.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -17,12 +16,18 @@ gulp.task('styles', function() {
     .pipe(cssnano())
     .pipe(gulp.dest('./dist/css'))
     .pipe(notify({ message: 'Styles task complete' }));
-});
+};
 
-gulp.task('scripts', function() {
+const scriptsfunc = function() {
   return gulp.src('./dist/js/index.js')
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
-});
+};
+
+gulp.task('default', ['styles', 'scripts']);
+
+gulp.task('styles', stylesfunc);
+
+gulp.task('scripts', scriptsfunc);
