@@ -40,7 +40,7 @@ Created for JS Hello World Project
 ### Cloning the repository
   
   ```bash
-    git clone https://github.com/practo/dx.git
+    git clone https://github.com/pranjalk/dx.git
     npm install
   ```
   
