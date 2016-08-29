@@ -12,9 +12,13 @@
   "author": "Pranjal Kumar",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "~6.14.0",
+    "babel-loader": "~6.2.5",
     "ejs": "^2.5.1",
     "eslint": "^3.3.1",
     "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "pm2": "^1.1.3",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-logger": "^1.1.0",
@@ -34,7 +38,7 @@
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-stage-2": "^6.13.0",
+    "babel-preset-stage-2": "~6.13.0",
     "babelify": "^7.3.0",
     "del": "^2.2.2",
     "eslint": "^3.3.1",
@@ -60,6 +64,11 @@
     "jshint": "^2.9.3",
     "node-sass": "^3.8.0",
     "nodemon": "^1.10.2",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "babel-loader": "~6.2.5",
+    "babel-preset-es2015": "~6.14.0",
+    "babel-preset-react": "~6.11.1",
+    "es6-promise": "~3.2.1",
+    "babel-cli": "~6.14.0"
   }
 }
