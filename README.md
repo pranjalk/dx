@@ -41,6 +41,7 @@ Created for JS Hello World Project
   
   ```bash
     git clone https://github.com/practo/dx.git
+    npm install
   ```
   
 ### Running the server
@@ -48,18 +49,8 @@ Created for JS Hello World Project
   ```bash
     npm start
   ```
-  
-### Contributing
-- Please do not use random variable names in the code.
-- Variable names should be in snake_case. eg: trial_variable
-- Function names should be in camel case. eg: getInformation()
-- Class names should start with caps. eg: class Calculator
-- Please use associative arrays for improving the readablity
-- Please use tags for commits. eg: pranjalk_07082016_revised_readme
 
 > Always create branches and make a  pull request and assign it someone for review.
->
-> NEVER EVER PUSH DIRECTLY INTO MASTER!
 >
 > Please try to write self documenting code as much as possible.
 >
