@@ -49,12 +49,4 @@ Created for JS Hello World Project
   ```bash
     npm start
   ```
-
-> Always create branches and make a  pull request and assign it someone for review.
->
-> Please try to write self documenting code as much as possible.
->
-> At last, may the force be with you!
-
-### Version
-0.0.1
+  
